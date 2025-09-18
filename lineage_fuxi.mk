@@ -14,6 +14,15 @@ $(call inherit-product, device/xiaomi/fuxi/device.mk)
 # Inherit LineageOS configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Lunaris customizations
+TARGET_OPTIMIZED_DEXOPT := true
+WITH_BCR := true # basic call recorder
+WITH_GMS := true
+TARGET_USES_CORE_GAPPS := true
+TARGET_BUILD_DEVICE_AS_WEBCAM := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.paranoid.maintainer=bakkaq
+
 PRODUCT_DEVICE := fuxi
 PRODUCT_NAME := lineage_fuxi
 PRODUCT_BRAND := Xiaomi
