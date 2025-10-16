@@ -53,6 +53,3 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Inherit signing files
--include vendor/lineage-priv/keys/keys.mk
